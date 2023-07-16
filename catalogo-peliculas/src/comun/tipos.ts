@@ -36,6 +36,7 @@ export type Pelicula = {
     anio_estreno: number;
     poster: string;
     clasificacion: string;
+    esFavorito: boolean;
 };
 
 export const esPelicula = (valor: unknown): valor is Pelicula => {

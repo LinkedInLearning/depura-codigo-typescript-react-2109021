@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Pelicula, esPelicula } from "../comun/tipos";
 
 const validarDatosJSON = (datos: unknown): Pelicula[] | undefined => {
@@ -8,6 +8,7 @@ const validarDatosJSON = (datos: unknown): Pelicula[] | undefined => {
     const peliculas: Pelicula[] = [];
     for (const dato of datos) {
         dato.generos = dato.generos.split(',').map((genero: string) => genero.trim());
+        dato.esFavorito = false;
         if (esPelicula(dato)) {
             peliculas.push(dato as Pelicula);
         }
@@ -19,6 +20,17 @@ const validarDatosJSON = (datos: unknown): Pelicula[] | undefined => {
 const usePeliculas = () => {
 
     const [peliculas, setPeliculas] = useState<Pelicula[] | undefined>(undefined);
+
+    const cambiarFavorito = useCallback((peliculaFavorita: Pelicula, esFavorito: boolean) => {
+        setPeliculas(currPeliculas => currPeliculas?.map((pelicula) => {
+            if(pelicula.titulo === peliculaFavorita.titulo){
+                pelicula.esFavorito = esFavorito;
+            }
+            return pelicula;
+        }))
+    }, []);
+
+    const favoritos = useMemo(() => peliculas?.filter(pelicula => pelicula.esFavorito), [peliculas]);
 
     const obtenerDatos = () => {
         fetch('./peliculas.json',
@@ -39,7 +51,7 @@ const usePeliculas = () => {
         obtenerDatos()
     }, []);
 
-    return peliculas;
+    return { peliculas, favoritos, cambiarFavorito };
 };
 
 export default usePeliculas;
