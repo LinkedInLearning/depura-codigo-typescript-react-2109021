@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { Pelicula, esPelicula } from "../comun/tipos";
 
 const validarDatosJSON = (datos: unknown): Pelicula[] | undefined => {
+    debugger;
     if (!Array.isArray(datos)) {
         return undefined;
     }
