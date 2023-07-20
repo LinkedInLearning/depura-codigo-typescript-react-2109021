@@ -33,7 +33,7 @@ describe('PeliculaUI', ()=>{
 
     it('debe llamar método que se pasa como parámetro al hacer click en botón', () => {
         render(<PeliculaUI {...peliculaMock } cambiarFavorito={cambiarFavoritoMock} />);
-        const boton = screen.getByRole('button');
+        const boton = screen.getByRole('buton');
         fireEvent.click(boton);
         expect(cambiarFavoritoMock).toHaveBeenCalledWith({...peliculaMock, cambiarFavorito: cambiarFavoritoMock}, true);
     });

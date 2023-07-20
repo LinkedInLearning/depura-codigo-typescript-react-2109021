@@ -31,7 +31,7 @@ const usePeliculas = () => {
         }))
     }, []);
 
-    const favoritos = useMemo(() => peliculas?.filter(pelicula => pelicula.esFavorito), [peliculas]);
+    const favoritos = useMemo(() => peliculas?.filter(pelicula => pelicula.esFavorito), []);
 
     const obtenerDatos = () => {
         fetch('./peliculas.json',

@@ -7,7 +7,7 @@ type PropsPeliculaUI = Pelicula & {
 };
 
 function PeliculaUI(props: PropsPeliculaUI) {
-    const { id, titulo, descripcion, trama, idioma, pais, generos, anio_estreno, clasificacion, cambiarFavorito, esFavorito } = props;
+    const { id, titulo, descripcion, trama, idioma, pais, generos, anio_estreno, clasificacion, esFavorito } = props;
     return (
         <Card id={id} style={{ width: '100%', marginTop: '10px' }}>
             <Card.Body>
@@ -24,7 +24,7 @@ function PeliculaUI(props: PropsPeliculaUI) {
             <Card.Body>
                 <Card.Title>Trama</Card.Title>
                 <Card.Text>{trama}</Card.Text>
-                {esFavorito ? <Button onClick={() => cambiarFavorito(props, false)} variant="secondary">Remover de Favoritos</Button> : <Button variant="primary" onClick={() => cambiarFavorito(props, true)}>Agregar a Favoritos</Button>}
+                {esFavorito ? <Button variant="secondary">Remover de Favoritos</Button> : <Button variant="primary">Agregar a Favoritos</Button>}
             </Card.Body>
         </Card>
     )

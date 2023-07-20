@@ -8,7 +8,7 @@ import usePeliculas from './hooks/peliculasHook';
 import MenuCabecera from './componentes/MenuCabecera/MenuCabecera';
 
 function App() {
-  const { peliculas, favoritos, cambiarFavorito } = usePeliculas();
+  const { peliculas, cambiarFavorito } = usePeliculas();
   const [vistaActual, setVista] = useState<Vista>(Vista.Lista);
 
   return (
@@ -17,7 +17,7 @@ function App() {
       {vistaActual === Vista.Favoritos ? <h4>Mis Películas Favoritas</h4> : null}
       <Row xs={1}>
         {vistaActual === Vista.Lista && peliculas && peliculas.map((pelicula: Pelicula) => <Col xs={12} key={pelicula.id}><PeliculaUI {...pelicula} cambiarFavorito={cambiarFavorito} /></Col>)}
-        {vistaActual === Vista.Favoritos && favoritos && favoritos.map((pelicula: Pelicula) => <Col xs={12} key={pelicula.id}><PeliculaUI {...pelicula} cambiarFavorito={cambiarFavorito} /></Col>)}
+        {vistaActual === Vista.Favoritos && peliculas && peliculas.map((pelicula: Pelicula) => <Col xs={12} key={pelicula.id}><PeliculaUI {...pelicula} cambiarFavorito={cambiarFavorito} /></Col>)}
       </Row>
     </Container>
   );
