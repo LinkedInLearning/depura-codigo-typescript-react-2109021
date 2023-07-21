@@ -1,22 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Pelicula, esPelicula } from "../comun/tipos";
-
-const validarDatosJSON = (datos: unknown): Pelicula[] | undefined => {
-    debugger;
-    if (!Array.isArray(datos)) {
-        return undefined;
-    }
-    const peliculas: Pelicula[] = [];
-    for (const dato of datos) {
-        dato.generos = dato.generos.split(',').map((genero: string) => genero.trim());
-        dato.esFavorito = false;
-        if (esPelicula(dato)) {
-            peliculas.push(dato as Pelicula);
-        }
-    }
-
-    return peliculas;
-}
+import { Pelicula } from "../comun/tipos";
 
 const usePeliculas = () => {
 
@@ -44,7 +27,7 @@ const usePeliculas = () => {
         ).then((respuesta) => {
             return respuesta.json();
         }).then((datosPeliculas) => {
-            setPeliculas(validarDatosJSON(datosPeliculas.peliculas));
+            setPeliculas(datosPeliculas.peliculas);
         });
     }
 
