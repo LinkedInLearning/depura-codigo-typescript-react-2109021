@@ -16,9 +16,8 @@ Este repositorio contiene una aplicación React escrita en código TypeScript. E
 
 ## Instalación
 
-1. Instala [Node.js y NPM] (https://nodejs.org/en/download) 
-2. Para utilizar estos archivos de ejercicios, debes tener descargado lo siguiente:
-   - Un editor de código ([VS Code](https://code.visualstudio.com/) es recomendado)
+1. Instala [Node.js y NPM](https://nodejs.org/en/download) 
+2. Para utilizar estos archivos de ejercicios, necesitas un editor de código. [VS Code](https://code.visualstudio.com/) es recomendado.
 3. Clona este repositorio en tu máquina local usando la Terminal (macOS) o CMD (Windows), o una herramienta GUI como SourceTree.
 4. Desde la terminal dirigete a alguna de las ramas y entra a la carpeta `catalogo-peliculas` que contiene el código de la aplicación.
 5. Ejecuta el comando `npm install` para instalar las dependencias.
