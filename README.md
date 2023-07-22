@@ -12,7 +12,7 @@ Perfecciona tus habilidades de depuración en TypeScript con React en nuestro cu
 
 Este repositorio contiene una aplicación React escrita en código TypeScript. En el repositorio se encuentran dos ramas:
 - La rama `desafio` contiene el código de la aplicación con los problemas a resolver.
-- La rama `solución` contiene el código con la aplicación.
+- La rama `solucion` contiene el código con la aplicación.
 
 ## Instalación
 
