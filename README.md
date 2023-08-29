@@ -2,7 +2,7 @@
 
 Este es el repositorio del curso de LinkedIn Learning `Depura el código: TypeScript con React`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
 
-![Nombre completo del curso][lil-thumbnail-url] 
+![image](https://github.com/LinkedInLearning/depura-codigo-typescript-react-2109021/assets/71371373/29c53386-4456-4db5-bd6b-d3a3e5a650e7)
 
 Consulta el archivo Readme en la rama main para obtener instrucciones e información actualizadas.
 
@@ -30,7 +30,7 @@ Este repositorio contiene una aplicación React escrita en código TypeScript. E
 Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors/natalia-corea).
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
-[lil-course-url]: https://www.linkedin.com
+[lil-course-url]: https://www.linkedin.com/learning/depura-el-codigo-typescript-con-react/depura-una-aplicacion-react-con-typescript
 [lil-thumbnail-url]: https:
 
 [1]: # (End of ES-Instruction ###############################################################################################)
