@@ -32,5 +32,3 @@ Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.c
 [0]: # (Replace these placeholder URLs with actual course URLs)
 [lil-course-url]: https://www.linkedin.com/learning/depura-el-codigo-typescript-con-react/depura-una-aplicacion-react-con-typescript
 [lil-thumbnail-url]: https://media.licdn.com/dms/image/D560DAQF1Kogvu0MSNg/learning-public-crop_675_1200/0/1692940179446?e=2147483647&v=beta&t=yTrNpSpmS37PFps_Cy7t1o7N38cRGHz9pdzZaPhv4PM
-
-[1]: # (End of ES-Instruction ###############################################################################################)
